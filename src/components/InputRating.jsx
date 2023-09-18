@@ -1,22 +1,14 @@
-import { useState } from "react"
 
-const InputRating = ({numberOption, initialState, idOption}) => {
-    const [isChecked, setIsChecked] = useState(initialState)
+const InputRating = ({numberOption, idOption, handleIdParent}) => {
 
-    const handleInputChage = (event) => {
-        setIsChecked(event.target.checked)
+    const handleId = () => {
+        handleIdParent(idOption)
     }
 
     return (
         <>
             <label htmlFor={idOption}>{numberOption}</label>
-            <input 
-                onChange={handleInputChage} 
-                type="checkbox" 
-                checked={isChecked} 
-                id={idOption}
-            />
-            <div>{`${isChecked}`}</div>
+            <input type="radio" id={idOption} name="input" onClick={handleId}/>
         </>
     )
 }
