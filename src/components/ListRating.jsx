@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InputRating from "./InputRating";
 
-const ListRating = () => {
+const ListRating = ({getSelected}) => {
     const [isChecked, setIsChecked] = useState(0)
+
+    useEffect(()=>{
+        getSelected(isChecked)
+    }, [isChecked])
 
     const handleIdParent = (idChildren) => {
         setIsChecked(idChildren)
@@ -15,8 +19,6 @@ const ListRating = () => {
             <InputRating numberOption={3} idOption={3} handleIdParent={handleIdParent}/>
             <InputRating numberOption={4} idOption={4} handleIdParent={handleIdParent}/>
             <InputRating numberOption={5} idOption={5} handleIdParent={handleIdParent}/>
-            
-            <p>{isChecked}</p>
         </>
     )
 }
