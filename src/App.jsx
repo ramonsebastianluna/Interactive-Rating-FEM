@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ListRating from "./components/ListRating";
 import RatingSelected from "./components/RatingSelected";
-import './styles.css';
+import './sass/App.scss';
 
 function App() {
     const [showForm, setShowForm] = useState(true)
