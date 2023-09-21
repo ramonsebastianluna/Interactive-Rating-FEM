@@ -21,6 +21,7 @@ function App() {
 
     const myClass = `warning ${message ? 'show' : 'hidden'}`
     const stylesForm = `form ${showForm ? 'show' : 'hidden'}`
+    const showRatingSelected = `rating-selected ${!showForm ? 'show' : 'hidden'}`
 
     return (
         <div className="mi-app">
@@ -36,7 +37,7 @@ function App() {
                 <button type="submit">Submit</button>
             </form>
             
-            <div className={!showForm ? 'show' : 'hidden'}>
+            <div className={showRatingSelected}>
                 <RatingSelected selectedOption={ratingSelected}/>
             </div>
 
