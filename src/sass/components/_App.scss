@@ -1,0 +1,31 @@
+.mi-app {
+    width: 375px;
+    height: 375px;
+    font-family: $Overpass;
+    font-weight: 400;
+    background-color: $Bg-Blue;
+    border-radius: 7%;
+    padding: 25px;
+    .show {
+        display: flex;
+        flex-direction: column;
+    }
+    .hidden {
+        display: none;
+    }
+    .warning {
+        color: $Orange;
+    }
+    .star-container {
+        background-color: $Dark-Blue;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 15px;
+        }
+    }
+}
