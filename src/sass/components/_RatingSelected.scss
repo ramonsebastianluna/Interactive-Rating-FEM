@@ -1,0 +1,23 @@
+.rating-selected {
+    align-items: center;
+    text-align: center;
+    img {
+        width: 150px;
+        margin-bottom: 25px;
+        margin-top: 7px;
+    }
+    .number-selected {
+        background-color: $Dark-Blue;
+        padding: 5px 15px;
+        color: $Orange;
+        border-radius: 15px;
+        font-size: 15px;
+    }
+    h2 {
+        margin: 26px 0 13px 0;
+        color: $White;
+    }
+    p {
+        color: $Medium-Grey;
+    }
+}
