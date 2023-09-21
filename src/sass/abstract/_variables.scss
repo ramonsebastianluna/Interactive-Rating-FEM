@@ -1,13 +1,13 @@
-@import url('https://fonts.google.com/specimen/Outfit');
+@import url('https://fonts.google.com/specimen/Overpass');
 
 //Colors
+$Orange: hsl(25, 97%, 53%);
+
 $White: hsl(0, 0%, 100%);
-$Light-gray: hsl(212, 45%, 89%);
-$Grayish-blue: hsl(220, 15%, 55%);
-$Dark-blue: hsl(218, 44%, 22%);
-$Circle: rgb(54, 133, 254);
-$Bg-qr: rgb(43, 125, 250);
-$BG-button-hover: rgb(32, 93, 185);
+$Light-Grey: hsl(217, 12%, 63%);
+$Medium-Grey: hsl(216, 12%, 54%);
+$Dark-Blue: hsl(213, 19%, 18%);
+$Very-Dark-Blue: hsl(216, 12%, 8%);
 
 //Font
 $Outfit-font: 'Poppins', sans-serif;
