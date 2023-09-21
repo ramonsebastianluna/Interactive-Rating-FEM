@@ -1,7 +1,8 @@
 import { useState } from "react";
 import ListRating from "./components/ListRating";
 import RatingSelected from "./components/RatingSelected";
-import './sass/App.scss';
+import star from "./assets/images/icon-star.svg";
+import './sass/main.scss';
 
 function App() {
     const [showForm, setShowForm] = useState(true)
@@ -18,9 +19,15 @@ function App() {
         ratingSelected == 0 ? setShowForm(true) : setShowForm(false)
     }
 
+    const myClass = `warning ${message ? 'show' : 'hidden'}`
+    const stylesForm = `form ${showForm ? 'show' : 'hidden'}`
+
     return (
-        <>
-            <form className={showForm ? 'show' : 'hidden'} onSubmit={handleForm} >
+        <div className="mi-app">
+            <form className={stylesForm} onSubmit={handleForm} >
+                <div className="star-container">
+                    <img src={star} alt="Star icon" />
+                </div>
                 <h1>How did we do?</h1>
                 <p>Please let us know how we did with your support request. All
                    feedback is appreciated to help us improve our offering!
@@ -33,8 +40,8 @@ function App() {
                 <RatingSelected selectedOption={ratingSelected}/>
             </div>
 
-            <p className={message ? 'show' : 'hidden'}>please, choose a rating point</p>
-        </>
+            <p className={myClass}>please, choose a rating point</p>
+        </div>
     )
 }
 
