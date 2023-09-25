@@ -28,4 +28,18 @@
             width: 15px;
         }
     }
+    button {
+        background-color: $Orange;
+        border: none;
+        text-transform: uppercase;
+        color: $White;
+        padding: 10px 30px;
+        border-radius: 25px;
+        letter-spacing: 2px;
+        &:hover {
+            background-color: $White;
+            color: $Orange;
+            cursor: pointer;
+        }
+    }
 }
