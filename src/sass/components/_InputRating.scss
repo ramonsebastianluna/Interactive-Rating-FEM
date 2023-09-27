@@ -5,9 +5,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: $Medium-Grey;
     &:hover {
         background-color: $Medium-Grey;
         cursor: pointer;
+        color: $White
     }
 }
 .gray-color {
@@ -16,6 +18,8 @@
 
 .orange-color {
     background-color: $Orange;
+    color: $White;
+    &:hover {background-color: $Orange;}
 }
 
 .rating-input {
