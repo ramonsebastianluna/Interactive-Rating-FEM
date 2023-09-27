@@ -20,12 +20,12 @@ function App() {
     }
 
     const myClass = `warning ${message ? 'show' : 'hidden'}`
-    const stylesForm = `form ${showForm ? 'show' : 'hidden'}`
+    const showFormClass = showForm ? 'show' : 'hidden'
     const showRatingSelected = `rating-selected ${!showForm ? 'show' : 'hidden'}`
 
     return (
         <div className="mi-app">
-            <form className={stylesForm} onSubmit={handleForm} >
+            <form className={showFormClass} onSubmit={handleForm} >
                 <div className="star-container">
                     <img src={star} alt="Star icon" />
                 </div>
