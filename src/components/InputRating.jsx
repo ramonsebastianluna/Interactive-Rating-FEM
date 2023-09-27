@@ -1,14 +1,16 @@
 
-const InputRating = ({numberOption, idOption, handleIdParent, onClick}) => {
+const InputRating = ({numberOption, idOption, handleIdParent, onClick, bgColor}) => {
 
     const handleId = () => {
         handleIdParent(idOption)
         onClick(idOption)
     }
 
+    const myClass = `rating-number ${bgColor ? 'orange-color' : 'gray-color'}`;
+
     return (
         <>
-            <label className="rating-number" htmlFor={idOption}>{numberOption}</label>
+            <label className={myClass} htmlFor={idOption}>{numberOption}</label>
             <input 
                 className="rating-input" 
                 type="radio" 

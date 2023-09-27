@@ -53,11 +53,41 @@ const ListRating = ({getSelected}) => {
     
     return (
         <div className="container-inputs">  
-            <InputRating numberOption={1} idOption={1} handleIdParent={handleIdParent} onClick={setStateActive}/>
-            <InputRating numberOption={2} idOption={2} handleIdParent={handleIdParent} onClick={setStateActive}/>
-            <InputRating numberOption={3} idOption={3} handleIdParent={handleIdParent} onClick={setStateActive}/>
-            <InputRating numberOption={4} idOption={4} handleIdParent={handleIdParent} onClick={setStateActive}/>
-            <InputRating numberOption={5} idOption={5} handleIdParent={handleIdParent} onClick={setStateActive}/>
+            <InputRating 
+                numberOption={1}
+                idOption={1}
+                handleIdParent={handleIdParent}
+                onClick={setStateActive}
+                bgColor={inputOneIsActive}
+            />
+            <InputRating
+                numberOption={2}
+                idOption={2}
+                handleIdParent={handleIdParent}
+                onClick={setStateActive}
+                bgColor={inputTwoIsActive}
+            />
+            <InputRating
+                numberOption={3}
+                idOption={3}
+                handleIdParent={handleIdParent}
+                onClick={setStateActive}
+                bgColor={inputThreeIsActive}
+            />
+            <InputRating
+                numberOption={4}
+                idOption={4}
+                handleIdParent={handleIdParent}
+                onClick={setStateActive}
+                bgColor={inputFourIsActive}
+            />
+            <InputRating
+                numberOption={5}
+                idOption={5}
+                handleIdParent={handleIdParent}
+                onClick={setStateActive}
+                bgColor={inputFiveIsActive}
+            />
         </div>
     )
 }
