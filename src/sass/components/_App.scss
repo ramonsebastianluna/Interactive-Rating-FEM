@@ -6,6 +6,9 @@
     background-color: $Bg-Blue;
     border-radius: 7%;
     padding: 25px;
+    @include sm-viewport(){
+        width: 90%;
+    }
     .show {
         display: flex;
         flex-direction: column;
