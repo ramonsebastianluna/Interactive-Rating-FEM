@@ -47,7 +47,7 @@ This project has allowed me to deeply learn about props behavior in React.js. I 
 
 ### Useful resources
 
-- [Concentional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - This helped me for understand how to make a efficient commits over the course of the proyect.
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - This helped me for understand how to make a efficient commits over the course of the proyect.
 - [Sass architecture](https://sass-guidelin.es/es/#arquitectura) - This is an amazing article which helped me finally understand the pattern 7-1 architecture. I'd recommend it to anyone still learning this concept. I really liked this pattern and will use it going forward.
 
 ## Author
