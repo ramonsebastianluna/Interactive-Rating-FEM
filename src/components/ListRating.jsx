@@ -3,11 +3,6 @@ import InputRating from "./InputRating";
 
 const ListRating = ({getSelected}) => {
     const [isChecked, setIsChecked] = useState(0)
-    const [inputOneIsActive, setInputOneIsActive] = useState(false)
-    const [inputTwoIsActive, setInputTwoIsActive] = useState(false)
-    const [inputThreeIsActive, setInputThreeIsActive] = useState(false)
-    const [inputFourIsActive, setInputFourIsActive] = useState(false)
-    const [inputFiveIsActive, setInputFiveIsActive] = useState(false)
 
     useEffect(()=>{
         getSelected(isChecked)
@@ -16,78 +11,18 @@ const ListRating = ({getSelected}) => {
     const handleIdParent = (idChildren) => {
         setIsChecked(idChildren)
     }
-
-    const setStateActive = (inputActive) => {
-        if (inputActive === 1) {
-            setInputOneIsActive(true);
-            setInputTwoIsActive(false);
-            setInputThreeIsActive(false);
-            setInputFourIsActive(false);
-            setInputFiveIsActive(false);
-        } else if (inputActive === 2) { 
-            setInputOneIsActive(false);
-            setInputTwoIsActive(true);
-            setInputThreeIsActive(false);
-            setInputFourIsActive(false);
-            setInputFiveIsActive(false);
-        } else if (inputActive === 3) {
-            setInputOneIsActive(false);
-            setInputTwoIsActive(false);
-            setInputThreeIsActive(true);
-            setInputFourIsActive(false);
-            setInputFiveIsActive(false);
-        } else if (inputActive === 4) {
-            setInputOneIsActive(false);
-            setInputTwoIsActive(false);
-            setInputThreeIsActive(false);
-            setInputFourIsActive(true);
-            setInputFiveIsActive(false);
-        } else if (inputActive === 5) {
-            setInputOneIsActive(false);
-            setInputTwoIsActive(false);
-            setInputThreeIsActive(false);
-            setInputFourIsActive(false);
-            setInputFiveIsActive(true);
-        }
-    }
     
     return (
-        <div className="container-inputs">  
-            <InputRating 
-                numberOption={1}
-                idOption={1}
-                handleIdParent={handleIdParent}
-                onClick={setStateActive}
-                bgColor={inputOneIsActive}
-            />
-            <InputRating
-                numberOption={2}
-                idOption={2}
-                handleIdParent={handleIdParent}
-                onClick={setStateActive}
-                bgColor={inputTwoIsActive}
-            />
-            <InputRating
-                numberOption={3}
-                idOption={3}
-                handleIdParent={handleIdParent}
-                onClick={setStateActive}
-                bgColor={inputThreeIsActive}
-            />
-            <InputRating
-                numberOption={4}
-                idOption={4}
-                handleIdParent={handleIdParent}
-                onClick={setStateActive}
-                bgColor={inputFourIsActive}
-            />
-            <InputRating
-                numberOption={5}
-                idOption={5}
-                handleIdParent={handleIdParent}
-                onClick={setStateActive}
-                bgColor={inputFiveIsActive}
-            />
+        <div className="container-inputs">
+            {[1, 2, 3, 4, 5].map((optionNumber) => (
+                <InputRating
+                    key={optionNumber}
+                    numberOption={optionNumber}
+                    idOption={optionNumber}
+                    handleIdParent={handleIdParent}
+                    bgColor={isChecked === optionNumber}
+                />
+            ))}
         </div>
     )
 }

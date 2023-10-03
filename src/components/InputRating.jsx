@@ -1,9 +1,8 @@
 
-const InputRating = ({numberOption, idOption, handleIdParent, onClick, bgColor}) => {
+const InputRating = ({numberOption, idOption, handleIdParent, bgColor}) => {
 
     const handleId = () => {
         handleIdParent(idOption)
-        onClick(idOption)
     }
 
     const myClass = `rating-number ${bgColor ? 'orange-color' : 'gray-color'}`;
